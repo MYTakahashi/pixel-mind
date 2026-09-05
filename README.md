@@ -3,7 +3,7 @@
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python&logoColor=white)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange?logo=tensorflow&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?logo=scikit-learn&logoColor=white)
-![License](https://img.shields.io/badge/Licença-MIT-green)
+
 
 > **PixelMind** é um pipeline preditivo ponta a ponta de Visão Computacional e Machine Learning focado na classificação de dígitos manuscritos (*MNIST dataset*). O projeto explora a transição da extração de matrizes de pixels para modelos estatísticos clássicos e redes neurais profundas, incluindo testes rigorosos com imagens próprias ✍️🎨
 
@@ -17,7 +17,8 @@
 - [📊 Modelos e Resultados Obtidos](#-modelos-e-resultados-obtidos)
 - [🧪 Teste Extremo (Imagens Próprias - Out of Distribution)](#-teste-extremo-imagens-próprias---out-of-distribution)
 - [🏁 Como Executar o Projeto](#-como-executar-o-projeto)
-- [🤝 Contribuição e Licença](#-contribuição-e-licença)
+- [📹 Vídeo explicativo](#-demonstração-e-explicação-em-vídeo)
+- [🧑🏻‍💻 Desenvolvedor](#autor)
 
 ---
 
@@ -31,15 +32,15 @@ Além disso, o projeto estressa os modelos treinados submetendo-os a imagens rea
 
 ## 🛠️ Ferramentas & Tecnologias
 
-O projeto foi desenvolvido em **Python 3.9+** utilizando bibliotecas consolidadas do ecossistema de Ciência de Dados:
+O projeto foi desenvolvido em **Python 3.11+** utilizando bibliotecas consolidadas do ecossistema de Ciência de Dados:
 
 | Categoria | Tecnologias Utilizadas |
 | :--- | :--- |
 | **Linguagem & Ambiente** | `Python`, `Jupyter Notebook` / `VS Code` |
 | **Manipulação & Análise** | `NumPy`, `Pandas` |
 | **Visão Computacional & Imagem** | `OpenCV`, `Pillow (PIL)`, `Matplotlib`, `Seaborn` |
-| **Machine Learning Clássico** | `scikit-learn` *(SVM, Random Forest, KNN, SGDClassifier)* |
-| **Deep Learning** | `TensorFlow` / `Keras` *(MLP / Dense Layers)* |
+| **Machine Learning Clássico** | `scikit-learn` *(Random Forest e KNN)* |
+| **Deep Learning** | `TensorFlow` / `Keras` *(MLP)* |
 
 ---
 
@@ -48,19 +49,13 @@ O projeto foi desenvolvido em **Python 3.9+** utilizando bibliotecas consolidada
 ```text
 pixel-mind/
 │
-├── 📁 data/                  # Conjuntos de dados e dados locais (MNIST, amostras)
-│   ├── raw/                  # Imagens brutas desenhadas à mão (.png / .jpg)
-│   └── processed/            # Imagens processadas em escala 28x28 pixels
+├── 📁 data/                  # Imagens desenhadas à mão (.png)
 │
-├── 📁 notebooks/             # Notebooks com análises exploratórias e treinos
-│   └── pixel_mind_pipeline.ipynb
-│
-├── 📁 src/                   # Módulos Python reutilizáveis
-│   ├── preprocessing.py      # Pipeline de conversão, inversão e normalização
-│   ├── models.py             # Definição e ajuste de hiperparâmetros
-│   └── evaluate.py           # Matriz de confusão e relatórios de métricas
+├── 📁 imagem/                # Imagem para o link do video
+│   └── video.png
 │
 ├── .gitignore                # Arquivos ignorados pelo Git
+├── pixel_pipeline.ipynb      # Arquivo com o código
 ├── README.md                 # Documentação principal do projeto
 └── requirements.txt          # Dependências do projeto para reprodutibilidade
 ```
@@ -70,9 +65,9 @@ pixel-mind/
 
 Modelo | Hiperparâmetros  | Ajustados Acurácia (Teste) | F1-Score (Macro)  
 |---------|------------|----------------------|----------------
-Random Forest   | n_estimators=100, max_depth=20 |  96.8% |  0.97 
-SVM (RBF Kernel) | C=10, kernel='rbf' | 98.2% | 0.98  
-Rede Neural (MLP) | Dense(128, relu) + Dropout(0.2) + Softmax | 98.5% | 0.98
+KNN  | n_neighbours=5, weights='distance' | 0.9703 | 0.9703
+Random Forest   | n_estimators=100, max_depth=20 |  0.9648 |  0.9648 
+Rede Neural (MLP) | Dense(128/64, relu) + learning_rate=0.001 | 0.9751 | 0.9751
 
 ---
 
@@ -81,16 +76,16 @@ Nesta etapa, validamos a generalização dos modelos usando dígitos escritos à
 
 Amostra Real  | Dígito Real | Predição do Modelo | Probabilidade | Status  
 |-------------|-------------|--------------------|---------------|-------  
-✍️ Amostra A | 5 | 5 | 99.2% | ✅ Sucesso   
-✍️ Amostra B | 3 | 3 | 95.8% | ✅ Sucesso  
-✍️ Amostra C | 8 | 8 | 89.4% | ✅ Sucesso
+✍️ Amostra A | 4 | 5 | 96.6% | ✅ Sucesso   
+✍️ Amostra B | 4 | 9 | 55.1% | ❌ Erro  
+✍️ Amostra C | 7 | 7 | 55.0% | ✅ Sucesso
 
 ---
 ## 🏁 Como Executar o Projeto
 Clone este repositório:
 
 ```Bash
-git clone https://github.com/seu-usuario/pixel-mind.git
+git clone https://github.com/MYTakahashi/pixel-mind.git
 cd pixel-mind
 ```
 ```Bash
@@ -107,5 +102,29 @@ pip install -r requirements.txt
 ```
 ```Bash
 Execute o notebook:  
-jupyter notebook notebooks/pixel_mind_pipeline.ipynb
+jupyter notebook pixel_pipeline.ipynb
 ```
+## 🎥 Demonstração e Explicação em Vídeo
+
+O vídeo explicativo detalhando os objetivos do sistema, a organização das tarefas, os desafios enfrentados e a tomada de decisões técnicas está disponível no link abaixo:
+<p align="center">
+    <a href="https://drive.google.com/file/d/12lUq1H0fUOTxCw0cHCQ-ksPViCi9F1_K/view?usp=link">
+        <img src="imagem/video.png" width="650">
+    </a>
+    <br>
+    <em>Clique na imagem para assistir à apresentação do projeto.</em>
+</p>
+
+---
+
+# Autor
+
+**Marcelo Yukio Takahashi**
+
+Engenheiro Eletricista
+
+Especialista em Projetos e Manutenção
+
+Analista e Ciêntista de Dados
+
+---
