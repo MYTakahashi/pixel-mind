@@ -76,7 +76,7 @@ Nesta etapa, validamos a generalização dos modelos usando dígitos escritos à
 
 Amostra Real  | Dígito Real | Predição do Modelo | Probabilidade | Status  
 |-------------|-------------|--------------------|---------------|-------  
-✍️ Amostra A | 4 | 5 | 96.6% | ✅ Sucesso   
+✍️ Amostra A | 4 | 4 | 96.6% | ✅ Sucesso   
 ✍️ Amostra B | 4 | 9 | 55.1% | ❌ Erro  
 ✍️ Amostra C | 7 | 7 | 55.0% | ✅ Sucesso
 
@@ -108,7 +108,7 @@ jupyter notebook pixel_pipeline.ipynb
 
 O vídeo explicativo detalhando os objetivos do sistema, a organização das tarefas, os desafios enfrentados e a tomada de decisões técnicas está disponível no link abaixo:
 <p align="center">
-    <a href="https://drive.google.com/file/d/12lUq1H0fUOTxCw0cHCQ-ksPViCi9F1_K/view?usp=link">
+    <a href="https://drive.google.com/file/d/11xy77F4fqvmnIfnSpGdmV5aS7hNNnUzl/view?usp=drive_link">
         <img src="imagem/video.png" width="650">
     </a>
     <br>
