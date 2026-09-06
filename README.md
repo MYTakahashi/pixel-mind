@@ -112,7 +112,7 @@ O vídeo explicativo detalhando os objetivos do sistema, a organização das tar
         <img src="imagem/video.png" width="650">
     </a>
     <br>
-    <em>Clique na imagem para assistir à apresentação do projeto.</em>
+    <em>Clique na imagem para assistir à apresentação deste projeto.</em>
 </p>
 
 ---
