@@ -76,9 +76,13 @@ Nesta etapa, validamos a generalização dos modelos usando dígitos escritos à
 
 Amostra Real  | Dígito Real | Predição do Modelo | Probabilidade | Status  
 |-------------|-------------|--------------------|---------------|-------  
-✍️ Amostra A | 4 | 4 | 96.6% | ✅ Sucesso   
-✍️ Amostra B | 4 | 9 | 55.1% | ❌ Erro  
-✍️ Amostra C | 7 | 7 | 55.0% | ✅ Sucesso
+✍️ Amostra A | 4 | 4 | 99.1% | ✅ Sucesso   
+✍️ Amostra B | 4 | 4 | 80.0% | ✅ Sucesso 
+✍️ Amostra C | 7 | 2 | 91.5% | ❌ Erro 
+
+Em nosso experimento o modelo conseguiu identificar corretamente duas das três amostras.  
+Sendo que na segunda amostra o modelo errou 18.4% confundindo o número 4 com o número 9 e na terceira amostra o modelo identificou o número 7 sendo o 2 com 91.5% de certeza.  
+Apesar do erro, isto demonstra uma boa performance do modelo de rede neural.
 
 ---
 ## 🏁 Como Executar o Projeto
