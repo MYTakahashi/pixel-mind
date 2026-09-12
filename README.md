@@ -112,7 +112,7 @@ jupyter notebook pixel_pipeline.ipynb
 
 O vídeo explicativo detalhando os objetivos do sistema, a organização das tarefas, os desafios enfrentados e a tomada de decisões técnicas está disponível no link abaixo:
 <p align="center">
-    <a href="https://drive.google.com/file/d/18oSvRLT7pvU-CKVm_ydiwOxx-MMuLE3-/view?usp=drive_link" target="_blank">
+    <a href="https://drive.google.com/file/d/18oSvRLT7pvU-CKVm_ydiwOxx-MMuLE3-/view?usp=drive_link">
     <img src="imagem/video.png" width="650">
     </a>
     <br>
